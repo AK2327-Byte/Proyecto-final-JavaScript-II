@@ -1,0 +1,31 @@
+@import 'config';
+@import 'base';
+// ... los demás imports
+@import 'components';
+@import 'header';
+@import 'searchResults';
+@import 'recipe';
+@import 'upload';
+@import 'preview';
+
+/* =========================================
+   AJUSTES DE CONTRASTE Y LEGIBILIDAD
+   ========================================= */
+
+/* Aumentar la intensidad y oscuridad de los textos generales */
+body, 
+p, 
+span, 
+li, 
+.recipe__description, 
+.recipe__ingredient-text {
+  color: #111111 !important;
+}
+
+/* Oscurecer y saturar los títulos naranjas para que no brillen tanto */
+.heading--2,
+.recipe__title span,
+.preview__title,
+.search__btn span {
+  color: #c83802 !important;
+}

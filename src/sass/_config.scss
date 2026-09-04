@@ -1,0 +1,22 @@
+// Variables globales de diseño y colores
+$color-primary: #f38e82;
+$color-grey-dark-1: #615551;
+$color-grey-dark-2: #918581;
+$color-grey-light-1: #fff5f2; // Crema clarito
+$color-grey-light-2: #fdfaf9; // Fondo secundario
+$color-grey-light-3: #d3c7c3;
+
+$color-grad-1: #fbdb89;
+$color-grad-2: #f48982;
+
+$gradient: linear-gradient(to bottom right, $color-grad-1, $color-grad-2);
+
+// Breakpoints
+$bp-large: 75em;
+$bp-medium: 61.25em;
+$bp-small: 37.5em;
+
+// Configuración de la API y paginación
+$API_URL: 'https://forkify-api.herokuapp.com/api/v2/recipes';
+$TIMEOUT_SEC: 10;
+$RES_PER_PAGE: 10;
