@@ -1,6 +1,5 @@
 @import 'config';
 @import 'base';
-// ... los demás imports
 @import 'components';
 @import 'header';
 @import 'searchResults';
@@ -28,4 +27,22 @@ li,
 .preview__title,
 .search__btn span {
   color: #c83802 !important;
+}
+
+/* =========================================
+   ADAPTACIÓN RESPONSIVA PARA MÓVILES
+   ========================================= */
+@media only screen and (max-width: 78.125em) {
+  .container {
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    min-height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 61.25em) {
+  .container {
+    grid-template-columns: 1fr;
+  }
 }
