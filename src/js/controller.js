@@ -4,7 +4,7 @@ import searchView from './views/searchView.js';
 import resultsView from './views/ResultsView.js';
 import paginationView from './views/paginationView.js';
 
-// ¡Aquí está la magia! Importamos los iconos para que Parcel los procese en producción
+// Importación de iconos para producción con Parcel
 import icons from 'url:../img/icons.svg';
 import 'regenerator-runtime/runtime';
 
@@ -17,7 +17,6 @@ const controlRecipes = async function () {
 
     // 0. Actualizar resultados AL INSTANTE para marcar la receta activa
     if (model.state.search.results.length > 0) {
-      // Usamos 'render' porque 'update' aún no está implementado en View.js
       resultsView.render(model.getSearchResultsPage()); 
     }
 
