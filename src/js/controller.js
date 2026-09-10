@@ -4,6 +4,8 @@ import searchView from './views/searchView.js';
 import resultsView from './views/ResultsView.js';
 import paginationView from './views/paginationView.js';
 
+// ¡Aquí está la magia! Importamos los iconos para que Parcel los procese en producción
+import icons from 'url:../img/icons.svg';
 import 'regenerator-runtime/runtime';
 
 const controlRecipes = async function () {
