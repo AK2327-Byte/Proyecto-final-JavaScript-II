@@ -1,0 +1,44 @@
+.search-results {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  /* Eliminamos el background-color de aquí para quitar las manchas */
+}
+
+.results {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.pagination {
+  /* Cambiamos 'auto' por '3rem' para subir los botones justo debajo de la lista */
+  margin-top: 3rem; 
+  padding: 0 3.5rem;
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  &__btn {
+    &--prev {
+      float: left;
+    }
+    &--next {
+      float: right;
+    }
+  }
+}
+
+.copyright {
+  color: $color-grey-dark-2;
+  font-size: 1.2rem;
+  padding: 0 3.5rem;
+  margin-top: 4rem;
+
+  .twitter-link:link,
+  .twitter-link:visited {
+    color: $color-grey-dark-2;
+  }
+}
