@@ -1,5 +1,5 @@
 import View from './View.js';
-import icons from 'url:../../img/icons.svg';
+const icons = new URL('../../img/icons.svg', import.meta.url).href;
 
 class RecipeView extends View {
   _parentElement = document.querySelector('.recipe');
@@ -92,20 +92,17 @@ class RecipeView extends View {
     const formatQuantity = function(q) {
       if (!q) return '';
       
-      // Separamos la parte entera y la decimal
       const whole = Math.floor(q);
       const decimal = q - whole;
       
       if (decimal === 0) return whole;
 
-      // Casos comunes exactos para que se vean limpios
       if (Math.abs(decimal - 0.5) < 0.01) return whole ? `${whole} 1/2` : '1/2';
       if (Math.abs(decimal - 0.25) < 0.01) return whole ? `${whole} 1/4` : '1/4';
       if (Math.abs(decimal - 0.75) < 0.01) return whole ? `${whole} 3/4` : '3/4';
       if (Math.abs(decimal - 0.33) < 0.05) return whole ? `${whole} 1/3` : '1/3';
       if (Math.abs(decimal - 0.66) < 0.05) return whole ? `${whole} 2/3` : '2/3';
 
-      // Para cualquier otro decimal, calculamos su fracción matemática real
       const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
       const len = q.toString().split('.')[1]?.length || 2;
       const denominator = Math.pow(10, len);
