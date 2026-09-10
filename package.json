@@ -4,9 +4,9 @@
   "description": "",
   "source": "index.html",
  "scripts": {
-  "start": "parcel index.html",
-  "build": "parcel build index.html --public-url ./"
-},
+    "start": "parcel index.html",
+    "build": "parcel build index.html --public-url ./"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AK2327-Byte/Proyecto-final-JavaScript-II.git"
